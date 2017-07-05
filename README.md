@@ -58,6 +58,6 @@
 ### 建议
 
 * Objective-C & Swift 对比学习能够对苹果底层的很多实现原理有更加深刻的体会
-* 项目课程结束后，建议用 Objective-C 重写项目
+* 分享结束后，建议用 Objective-C 和 Swift 对比写一个实战项目。
 
 
