@@ -1,0 +1,716 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>重载构造函数 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="init kvc.html" />
+    
+    
+    <link rel="prev" href="init basic.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Swift 语法浅析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../primer/">
+            
+                <a href="../primer/">
+            
+                    
+                    快速体验
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.1" data-path="../primer/playground.html">
+            
+                <a href="../primer/playground.html">
+            
+                    
+                    playground
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.2" data-path="../primer/first app.html">
+            
+                <a href="../primer/first app.html">
+            
+                    
+                    项目开发体验
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../basic/">
+            
+                <a href="../basic/">
+            
+                    
+                    基本语法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.1" data-path="../basic/let and var.html">
+            
+                <a href="../basic/let and var.html">
+            
+                    
+                    常量和变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.2" data-path="../basic/optional.html">
+            
+                <a href="../basic/optional.html">
+            
+                    
+                    Optional
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.3" data-path="../basic/control flow.html">
+            
+                <a href="../basic/control flow.html">
+            
+                    
+                    控制流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.4" data-path="../basic/loop.html">
+            
+                <a href="../basic/loop.html">
+            
+                    
+                    循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.5" data-path="../basic/string.html">
+            
+                <a href="../basic/string.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.6" data-path="../basic/collection.html">
+            
+                <a href="../basic/collection.html">
+            
+                    
+                    集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../func/">
+            
+                <a href="../func/">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.1" data-path="../func/func.html">
+            
+                <a href="../func/func.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.2" data-path="../func/closure.html">
+            
+                <a href="../func/closure.html">
+            
+                    
+                    闭包
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.2.1" data-path="../func/closure define.html">
+            
+                <a href="../func/closure define.html">
+            
+                    
+                    闭包的定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.2.2" data-path="../func/closure basic.html">
+            
+                <a href="../func/closure basic.html">
+            
+                    
+                    基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.2.3" data-path="../func/closure retain cycle.html">
+            
+                <a href="../func/closure retain cycle.html">
+            
+                    
+                    循环引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    面相对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.4.1" data-path="init basic.html">
+            
+                <a href="init basic.html">
+            
+                    
+                    构造函数基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.4.2" data-path="overload init.html">
+            
+                <a href="overload init.html">
+            
+                    
+                    重载构造函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.3" data-path="init kvc.html">
+            
+                <a href="init kvc.html">
+            
+                    
+                    KVC 构造函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.4" data-path="init convenience.html">
+            
+                <a href="init convenience.html">
+            
+                    
+                    便利构造函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.5" data-path="lazy.html">
+            
+                <a href="lazy.html">
+            
+                    
+                    懒加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.6" data-path="read only.html">
+            
+                <a href="read only.html">
+            
+                    
+                    只读属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="../network/">
+            
+                <a href="../network/">
+            
+                    
+                    网络访问
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="../practice/">
+            
+                <a href="../practice/">
+            
+                    
+                    项目演练
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.6.1" data-path="../practice/preparation.html">
+            
+                <a href="../practice/preparation.html">
+            
+                    
+                    准备工作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6.2" data-path="../practice/load data.html">
+            
+                <a href="../practice/load data.html">
+            
+                    
+                    创建模型加载数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6.3" data-path="../practice/table view cell.html">
+            
+                <a href="../practice/table view cell.html">
+            
+                    
+                    自定义 Cell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6.4" data-path="../practice/detail view controller.html">
+            
+                <a href="../practice/detail view controller.html">
+            
+                    
+                    明细控制器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >重载构造函数</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x91CD;&#x8F7D;&#x6784;&#x9020;&#x51FD;&#x6570;">&#x91CD;&#x8F7D;&#x6784;&#x9020;&#x51FD;&#x6570;</h1>
+<ul>
+<li>Swift &#x4E2D;&#x652F;&#x6301;&#x51FD;&#x6570;&#x91CD;&#x8F7D;&#xFF0C;&#x540C;&#x6837;&#x7684;&#x51FD;&#x6570;&#x540D;&#xFF0C;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#x53C2;&#x6570;&#x7C7B;&#x578B;</li>
+</ul>
+<pre><code class="lang-swift"><span class="hljs-comment">/// `&#x91CD;&#x8F7D;`&#x6784;&#x9020;&#x51FD;&#x6570;</span>
+<span class="hljs-comment">///</span>
+<span class="hljs-comment">/// - parameter name: &#x59D3;&#x540D;</span>
+<span class="hljs-comment">/// - parameter age:  &#x5E74;&#x9F84;</span>
+<span class="hljs-comment">///</span>
+<span class="hljs-comment">/// - returns: Person &#x5BF9;&#x8C61;</span>
+<span class="hljs-keyword">init</span>(name: <span class="hljs-type">String</span>, age: <span class="hljs-type">Int</span>) {
+    <span class="hljs-keyword">self</span>.name = name
+    <span class="hljs-keyword">self</span>.age = age
+
+    <span class="hljs-keyword">super</span>.<span class="hljs-keyword">init</span>()
+}
+</code></pre>
+<h2 id="&#x6CE8;&#x610F;&#x4E8B;&#x9879;">&#x6CE8;&#x610F;&#x4E8B;&#x9879;</h2>
+<ul>
+<li>&#x5982;&#x679C;&#x91CD;&#x8F7D;&#x4E86;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF0C;&#x4F46;&#x662F;&#x6CA1;&#x6709;&#x5B9E;&#x73B0;&#x9ED8;&#x8BA4;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570; <code>init()</code>&#xFF0C;&#x5219;&#x7CFB;&#x7EDF;&#x4E0D;&#x518D;&#x63D0;&#x4F9B;&#x9ED8;&#x8BA4;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;</li>
+<li>&#x539F;&#x56E0;&#xFF0C;&#x5728;&#x5B9E;&#x4F8B;&#x5316;&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x5FC5;&#x987B;&#x901A;&#x8FC7;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4E3A;&#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#x5206;&#x914D;&#x7A7A;&#x95F4;&#x548C;&#x8BBE;&#x7F6E;&#x521D;&#x59CB;&#x503C;&#xFF0C;&#x5BF9;&#x4E8E;&#x5B58;&#x5728;&#x5FC5;&#x9009;&#x53C2;&#x6570;&#x7684;&#x7C7B;&#x800C;&#x8A00;&#xFF0C;&#x9ED8;&#x8BA4;&#x7684; <code>init()</code> &#x65E0;&#x6CD5;&#x5B8C;&#x6210;&#x5206;&#x914D;&#x7A7A;&#x95F4;&#x548C;&#x8BBE;&#x7F6E;&#x521D;&#x59CB;&#x503C;&#x7684;&#x5DE5;&#x4F5C;</li>
+</ul>
+<h2 id="&#x8C03;&#x6574;&#x5B50;&#x7C7B;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;">&#x8C03;&#x6574;&#x5B50;&#x7C7B;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;</h2>
+<ul>
+<li><code>&#x91CD;&#x5199;</code>&#x7236;&#x7C7B;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;</li>
+</ul>
+<pre><code class="lang-swift"><span class="hljs-comment">/// `&#x91CD;&#x5199;`&#x7236;&#x7C7B;&#x6784;&#x9020;&#x51FD;&#x6570;</span>
+<span class="hljs-comment">///</span>
+<span class="hljs-comment">/// - parameter name: &#x59D3;&#x540D;</span>
+<span class="hljs-comment">/// - parameter age:  &#x5E74;&#x9F84;</span>
+<span class="hljs-comment">///</span>
+<span class="hljs-comment">/// - returns: Student &#x5BF9;&#x8C61;</span>
+<span class="hljs-keyword">override</span> <span class="hljs-keyword">init</span>(name: <span class="hljs-type">String</span>, age: <span class="hljs-type">Int</span>) {
+    no = <span class="hljs-string">&quot;002&quot;</span>
+
+    <span class="hljs-keyword">super</span>.<span class="hljs-keyword">init</span>(name: name, age: age)
+}
+</code></pre>
+<ul>
+<li><code>&#x91CD;&#x8F7D;</code>&#x6784;&#x9020;&#x51FD;&#x6570;</li>
+</ul>
+<pre><code class="lang-swift"><span class="hljs-comment">/// `&#x91CD;&#x8F7D;`&#x6784;&#x9020;&#x51FD;&#x6570;</span>
+<span class="hljs-comment">///</span>
+<span class="hljs-comment">/// - parameter name: &#x59D3;&#x540D;</span>
+<span class="hljs-comment">/// - parameter age:  &#x5E74;&#x9F84;</span>
+<span class="hljs-comment">/// - parameter no:   &#x5B66;&#x53F7;</span>
+<span class="hljs-comment">///</span>
+<span class="hljs-comment">/// - returns: Student &#x5BF9;&#x8C61;</span>
+<span class="hljs-keyword">init</span>(name: <span class="hljs-type">String</span>, age: <span class="hljs-type">Int</span>, no: <span class="hljs-type">String</span>) {
+    <span class="hljs-keyword">self</span>.no = no
+
+    <span class="hljs-keyword">super</span>.<span class="hljs-keyword">init</span>(name: name, age: age)
+}
+</code></pre>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C;&#x662F;&#x91CD;&#x8F7D;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF0C;&#x5FC5;&#x987B; <code>super</code> &#x4EE5;&#x5B8C;&#x6210;&#x7236;&#x7C7B;&#x5C5E;&#x6027;&#x7684;&#x521D;&#x59CB;&#x5316;&#x5DE5;&#x4F5C;</p>
+</blockquote>
+<h2 id="&#x91CD;&#x8F7D;&#x548C;&#x91CD;&#x5199;"><code>&#x91CD;&#x8F7D;</code>&#x548C;<code>&#x91CD;&#x5199;</code></h2>
+<ul>
+<li><code>&#x91CD;&#x8F7D;</code>&#xFF0C;&#x51FD;&#x6570;&#x540D;&#x76F8;&#x540C;&#xFF0C;&#x53C2;&#x6570;&#x540D;&#xFF0F;&#x53C2;&#x6570;&#x7C7B;&#x578B;&#xFF0F;&#x53C2;&#x6570;&#x4E2A;&#x6570;&#x4E0D;&#x540C;<ul>
+<li>&#x91CD;&#x8F7D;&#x51FD;&#x6570;&#x5E76;&#x4E0D;&#x4EC5;&#x4EC5;&#x5C40;&#x9650;&#x4E8E;<code>&#x6784;&#x9020;&#x51FD;&#x6570;</code></li>
+<li>&#x51FD;&#x6570;&#x91CD;&#x8F7D;&#x662F;&#x9762;&#x76F8;&#x5BF9;&#x8C61;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#x8BED;&#x8A00;&#x7684;&#x91CD;&#x8981;&#x6807;&#x5FD7;</li>
+<li>&#x51FD;&#x6570;&#x91CD;&#x8F7D;&#x80FD;&#x591F;&#x7B80;&#x5316;&#x7A0B;&#x5E8F;&#x5458;&#x7684;&#x8BB0;&#x5FC6;</li>
+<li>OC &#x4E0D;&#x652F;&#x6301;&#x51FD;&#x6570;&#x91CD;&#x8F7D;&#xFF0C;OC &#x7684;&#x66FF;&#x4EE3;&#x65B9;&#x5F0F;&#x662F; <code>withXXX...</code></li>
+</ul>
+</li>
+<li><code>&#x91CD;&#x5199;</code>&#xFF0C;&#x5B50;&#x7C7B;&#x9700;&#x8981;&#x5728;&#x7236;&#x7C7B;&#x62E5;&#x6709;&#x65B9;&#x6CD5;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x8FDB;&#x884C;&#x6269;&#x5C55;&#xFF0C;&#x9700;&#x8981; <code>override</code> &#x5173;&#x952E;&#x5B57;</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="init basic.html" class="navigation navigation-prev " aria-label="Previous page: 构造函数基础">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="init kvc.html" class="navigation navigation-next " aria-label="Next page: KVC 构造函数">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"重载构造函数","level":"1.1.4.2","depth":3,"next":{"title":"KVC 构造函数","level":"1.1.4.3","depth":3,"path":"oop/init kvc.md","ref":"oop/init kvc.md","articles":[]},"previous":{"title":"构造函数基础","level":"1.1.4.1","depth":3,"path":"oop/init basic.md","ref":"oop/init basic.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"oop/overload init.md","mtime":"2015-10-11T20:41:04.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-05T06:57:24.704Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

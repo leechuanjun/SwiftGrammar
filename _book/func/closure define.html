@@ -1,0 +1,685 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>闭包的定义 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="closure basic.html" />
+    
+    
+    <link rel="prev" href="closure.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Swift 语法浅析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../primer/">
+            
+                <a href="../primer/">
+            
+                    
+                    快速体验
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.1" data-path="../primer/playground.html">
+            
+                <a href="../primer/playground.html">
+            
+                    
+                    playground
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.2" data-path="../primer/first app.html">
+            
+                <a href="../primer/first app.html">
+            
+                    
+                    项目开发体验
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../basic/">
+            
+                <a href="../basic/">
+            
+                    
+                    基本语法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.1" data-path="../basic/let and var.html">
+            
+                <a href="../basic/let and var.html">
+            
+                    
+                    常量和变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.2" data-path="../basic/optional.html">
+            
+                <a href="../basic/optional.html">
+            
+                    
+                    Optional
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.3" data-path="../basic/control flow.html">
+            
+                <a href="../basic/control flow.html">
+            
+                    
+                    控制流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.4" data-path="../basic/loop.html">
+            
+                <a href="../basic/loop.html">
+            
+                    
+                    循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.5" data-path="../basic/string.html">
+            
+                <a href="../basic/string.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.6" data-path="../basic/collection.html">
+            
+                <a href="../basic/collection.html">
+            
+                    
+                    集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.1" data-path="func.html">
+            
+                <a href="func.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.2" data-path="closure.html">
+            
+                <a href="closure.html">
+            
+                    
+                    闭包
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.1.3.2.1" data-path="closure define.html">
+            
+                <a href="closure define.html">
+            
+                    
+                    闭包的定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.2.2" data-path="closure basic.html">
+            
+                <a href="closure basic.html">
+            
+                    
+                    基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.2.3" data-path="closure retain cycle.html">
+            
+                <a href="closure retain cycle.html">
+            
+                    
+                    循环引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../oop/">
+            
+                <a href="../oop/">
+            
+                    
+                    面相对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.4.1" data-path="../oop/init basic.html">
+            
+                <a href="../oop/init basic.html">
+            
+                    
+                    构造函数基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.2" data-path="../oop/overload init.html">
+            
+                <a href="../oop/overload init.html">
+            
+                    
+                    重载构造函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.3" data-path="../oop/init kvc.html">
+            
+                <a href="../oop/init kvc.html">
+            
+                    
+                    KVC 构造函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.4" data-path="../oop/init convenience.html">
+            
+                <a href="../oop/init convenience.html">
+            
+                    
+                    便利构造函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.5" data-path="../oop/lazy.html">
+            
+                <a href="../oop/lazy.html">
+            
+                    
+                    懒加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.6" data-path="../oop/read only.html">
+            
+                <a href="../oop/read only.html">
+            
+                    
+                    只读属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="../network/">
+            
+                <a href="../network/">
+            
+                    
+                    网络访问
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="../practice/">
+            
+                <a href="../practice/">
+            
+                    
+                    项目演练
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.6.1" data-path="../practice/preparation.html">
+            
+                <a href="../practice/preparation.html">
+            
+                    
+                    准备工作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6.2" data-path="../practice/load data.html">
+            
+                <a href="../practice/load data.html">
+            
+                    
+                    创建模型加载数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6.3" data-path="../practice/table view cell.html">
+            
+                <a href="../practice/table view cell.html">
+            
+                    
+                    自定义 Cell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6.4" data-path="../practice/detail view controller.html">
+            
+                <a href="../practice/detail view controller.html">
+            
+                    
+                    明细控制器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >闭包的定义</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x95ED;&#x5305;&#x7684;&#x5B9A;&#x4E49;">&#x95ED;&#x5305;&#x7684;&#x5B9A;&#x4E49;</h1>
+<ul>
+<li>&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x51FD;&#x6570;</li>
+</ul>
+<pre><code class="lang-swift"><span class="hljs-comment">//: &#x5B9A;&#x4E49;&#x4E00;&#x4E2A; sum &#x51FD;&#x6570;</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">sum</span><span class="hljs-params">(num1 num1: Int, num2: Int)</span></span> -&gt; <span class="hljs-type">Int</span> {
+    <span class="hljs-keyword">return</span> num1 + num2
+}
+sum(num1: <span class="hljs-number">10</span>, num2: <span class="hljs-number">30</span>)
+
+<span class="hljs-comment">//: &#x5728; Swift &#x4E2D;&#x51FD;&#x6570;&#x672C;&#x8EAB;&#x5C31;&#x53EF;&#x4EE5;&#x5F53;&#x4F5C;&#x53C2;&#x6570;&#x88AB;&#x5B9A;&#x4E49;&#x548C;&#x4F20;&#x9012;</span>
+<span class="hljs-keyword">let</span> mySum = sum
+<span class="hljs-keyword">let</span> result = mySum(num1: <span class="hljs-number">20</span>, num2: <span class="hljs-number">30</span>)
+</code></pre>
+<ul>
+<li>&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x95ED;&#x5305;<ul>
+<li>&#x95ED;&#x5305; = { (&#x884C;&#x53C2;) -&gt; &#x8FD4;&#x56DE;&#x503C; in // &#x4EE3;&#x7801;&#x5B9E;&#x73B0; }</li>
+<li><code>in</code> &#x7528;&#x4E8E;&#x533A;&#x5206;&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x548C;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-swift"><span class="hljs-comment">//: &#x95ED;&#x5305; = { (&#x884C;&#x53C2;) -&gt; &#x8FD4;&#x56DE;&#x503C; in // &#x4EE3;&#x7801;&#x5B9E;&#x73B0; }</span>
+<span class="hljs-keyword">let</span> sumFunc = { (num1 x: <span class="hljs-type">Int</span>, num2 y: <span class="hljs-type">Int</span>) -&gt; <span class="hljs-type">Int</span> <span class="hljs-keyword">in</span>
+    <span class="hljs-keyword">return</span> x + y
+}
+sumFunc(num1: <span class="hljs-number">10</span>, num2: <span class="hljs-number">20</span>)
+</code></pre>
+<ul>
+<li>&#x6700;&#x7B80;&#x5355;&#x7684;&#x95ED;&#x5305;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x53C2;&#x6570;/&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x5219; <code>&#x53C2;&#x6570;/&#x8FD4;&#x56DE;&#x503C;/in</code> &#x7EDF;&#x7EDF;&#x90FD;&#x53EF;&#x4EE5;&#x7701;&#x7565;<ul>
+<li>{ &#x4EE3;&#x7801;&#x5B9E;&#x73B0; }</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-swift"><span class="hljs-keyword">let</span> demoFunc = {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;hello&quot;</span>)
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="closure.html" class="navigation navigation-prev " aria-label="Previous page: 闭包">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="closure basic.html" class="navigation navigation-next " aria-label="Next page: 基本使用">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"闭包的定义","level":"1.1.3.2.1","depth":4,"next":{"title":"基本使用","level":"1.1.3.2.2","depth":4,"path":"func/closure basic.md","ref":"func/closure basic.md","articles":[]},"previous":{"title":"闭包","level":"1.1.3.2","depth":3,"path":"func/closure.md","ref":"func/closure.md","articles":[{"title":"闭包的定义","level":"1.1.3.2.1","depth":4,"path":"func/closure define.md","ref":"func/closure define.md","articles":[]},{"title":"基本使用","level":"1.1.3.2.2","depth":4,"path":"func/closure basic.md","ref":"func/closure basic.md","articles":[]},{"title":"循环引用","level":"1.1.3.2.3","depth":4,"path":"func/closure retain cycle.md","ref":"func/closure retain cycle.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"func/closure define.md","mtime":"2015-10-10T21:21:00.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-05T06:57:24.704Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
