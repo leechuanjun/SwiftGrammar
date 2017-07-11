@@ -7,7 +7,10 @@
 
 ## 学习资源
 
-* 苹果官方博客 https://developer.apple.com/swift/blog/
-* 苹果官方 Swift 2.0 电子书 https://itunes.apple.com/us/book/id1002622538
-* 2.0 中文版 http://wiki.jikexueyuan.com/project/swift/
-* 100个Swift必备tips，作者王巍，建议购买实体书 http://onevcat.com
+* 苹果官方博客 [https://developer.apple.com/swift/blog/](https://developer.apple.com/swift/blog/)
+* 苹果官方 Swift 2.0 电子书 [https://itunes.apple.com/us/book/id1002622538](https://itunes.apple.com/us/book/id1002622538)
+* 2.0 中文版 [http://wiki.jikexueyuan.com/project/swift/](http://wiki.jikexueyuan.com/project/swift/)
+* 100个Swift必备tips，作者王巍，建议购买实体书 [http://onevcat.com](http://onevcat.com)
+
+
+
