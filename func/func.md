@@ -22,7 +22,7 @@ func sum(a: Int, b: Int) -> Int {
     return a + b
 }
 
-let result = sum(10, b: 20)
+let result = sum(a: 10, b: 20)
 ```
 
 * 没有返回值的函数，一共有三种写法
