@@ -6,7 +6,7 @@
 
 ```swift
 func loadData() {
-    dispatch_async(dispatch_get_global_queue(0, 0), { () -> Void in
+    DispatchQueue.global().async { () -> Void in
         print("耗时操作 \(NSThread .currentThread())")
     })
 }
@@ -17,7 +17,7 @@ func loadData() {
 
 ```swift
 func loadData() {
-    dispatch_async(dispatch_get_global_queue(0, 0)) { () -> Void in
+    DispatchQueue.global().async { () -> Void in
         print("耗时操作 \(NSThread .currentThread())")
     }
 }
@@ -27,7 +27,7 @@ func loadData() {
 
 ```swift
 func loadData() {
-    dispatch_async(dispatch_get_global_queue(0, 0)) {
+    DispatchQueue.global().async {
         print("耗时操作 \(NSThread .currentThread())")
     }
 }
@@ -49,10 +49,10 @@ override func viewDidLoad() {
 // MARK: - 自定义闭包参数
 func loadData(finished: ()->()) {
 
-    dispatch_async(dispatch_get_global_queue(0, 0)) {
+    DispatchQueue.global().async {
         print("耗时操作 \(NSThread.currentThread())")
 
-        dispatch_sync(dispatch_get_main_queue()) {
+        DispatchQueue.main.async(execute: {
             print("主线程回调 \(NSThread.currentThread())")
 
             // 执行回调
@@ -75,16 +75,19 @@ override func viewDidLoad() {
 
 /// 加载数据
 /// 完成回调 - 传入回调闭包，接收异步执行的结果
-func loadData4(finished: (html: String) -> ()) {
-    
-    dispatch_async(dispatch_get_global_queue(0, 0)) {
+func loadData4(finished: @escaping (_ html: String) -> ()) {
+
+    DispatchQueue.global().async {
         print("加载数据 \(NSThread.currentThread())")
-        
-        dispatch_sync(dispatch_get_main_queue()) {
+
+        DispatchQueue.main.async(execute: {
             print("完成回调 \(NSThread.currentThread())")
-            
+
             finished(html: "<h1>hello world</h1>")
         }
     }
 }
 ```
+
+
+
