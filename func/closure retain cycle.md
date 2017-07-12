@@ -55,7 +55,7 @@ var finishedCallBack: (()->())?
 /// 加载数据
 ///
 /// - parameter finished: 完成回调
-func loadData(finished: () -> ()) -> () {
+func loadData(finished: @escaping () -> ()) -> () {
     
     self.finishedCallBack = finished
     
