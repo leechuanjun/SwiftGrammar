@@ -17,7 +17,7 @@
            * [闭包的定义](func/closure define.md)
            * [基本使用](func/closure basic.md)
            * [循环引用](func/closure retain cycle.md)
-   * [面相对象](oop/README.md)
+   * [面向对象](oop/README.md)
        * [构造函数基础](oop/init basic.md)
        * [重载构造函数](oop/overload init.md)
        * [KVC 构造函数](oop/init kvc.md)
