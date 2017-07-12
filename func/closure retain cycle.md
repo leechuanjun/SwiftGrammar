@@ -8,7 +8,7 @@ class NetworkTools: NSObject {
     /// 加载数据
     ///
     /// - parameter finished: 完成回调
-    func loadData(finished: () -> ()) {
+    func loadData(finished: @escaping () -> ()) ->() {
         print("开始加载数据...")
         
         // ...
