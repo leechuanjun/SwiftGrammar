@@ -7,11 +7,11 @@
 
 ## 明确开发步骤
 
-1. 创建 tableViewContrller
+1. 创建 TLListTableViewController
 2. 绑定数据，用闭包回调，模拟网络加载延时操作
-3. 自定义 Cell
-4. 跳转到 detailViewController
-5. 传递数值，设置 detailViewController 的 UI
+3. 自定义 UITableViewCell `Indentifier 为 listCellId`
+4. 跳转到 TLDetailTableViewController
+5. 传递数值，设置 TLDetailTableViewController 的 UI
 6. 保存，使用`闭包`回调
 
 
