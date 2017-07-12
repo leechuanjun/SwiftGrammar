@@ -47,7 +47,7 @@ override init() {
 
 提示错误 `Property 'self.name' not initialized at super.init call` -&gt; `属性 'self.name' 没有在 super.init 调用前被初始化`
 
-* 为比选属性设置初始值
+* 为必选属性设置初始值
 
 ```swift
 /// `重写`父类的构造函数
