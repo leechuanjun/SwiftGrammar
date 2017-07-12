@@ -54,6 +54,7 @@ if let u = url where u.host == "www.baidu.com" {
     let request = NSURLRequest(URL: u)
 }
 ```
+
 #### 可选项条件判断
 
 ```swift
@@ -71,9 +72,9 @@ if let u = url where u.host == "www.baidu.com" {
 ```
 
 * 小结
-    * `if let` 不能与使用 `&&`、`||` 等条件判断
-    * 如果要增加条件，可以使用 `where` 子句
-    * 注意：`where` 子句没有智能提示
+  * `if let` 不能与使用 `&&`、`||` 等条件判断
+  * 如果要增加条件，可以使用 `where` 子句
+  * 注意：`where` 子句没有智能提示
 
 #### 多个可选项判断
 
@@ -100,10 +101,10 @@ let oName: String? = "张三"
 let oNum: Int? = 18
 
 if var name = oName, num = oNum {
-    
+
     name = "李四"
     num = 1
-    
+
     print(name, num)
 }
 ```
@@ -133,8 +134,8 @@ print(num)
 
 * 在程序编写时，条件检测之后的代码相对是比较复杂的
 * 使用 guard 的好处
-    - 能够判断每一个值
-    - 在真正的代码逻辑部分，省略了一层嵌套
+  * 能够判断每一个值
+  * 在真正的代码逻辑部分，省略了一层嵌套
 
 ## switch
 
@@ -186,4 +187,6 @@ case _ where score > 60: print("及格")
 default: print("其他")
 }
 ```
+
+
 
