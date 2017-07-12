@@ -21,7 +21,7 @@ class Person: NSObject {
 }
 ```
 
-提示错误 `Class 'Person' has no initializers` -> `'Person' 类没有实例化器s`
+提示错误 `Class 'Person' has no initializers` -&gt; `'Person' 类没有实例化器s`
 
 原因：如果一个类中定义了必选属性，必须通过构造函数为这些必选属性分配空间并且设置初始值
 
@@ -30,11 +30,11 @@ class Person: NSObject {
 ```swift
 /// `重写`父类的构造函数
 override init() {
-    
+
 }
 ```
 
-提示错误 `Property 'self.name' not initialized at implicitly generated super.init call` -> `属性 'self.name' 没有在隐式生成的 super.init 调用前被初始化`
+提示错误 `Property 'self.name' not initialized at implicitly generated super.init call` -&gt; `属性 'self.name' 没有在隐式生成的 super.init 调用前被初始化`
 
 * 手动添加 `super.init()` 调用
 
@@ -45,7 +45,7 @@ override init() {
 }
 ```
 
-提示错误 `Property 'self.name' not initialized at super.init call` -> `属性 'self.name' 没有在 super.init 调用前被初始化`
+提示错误 `Property 'self.name' not initialized at super.init call` -&gt; `属性 'self.name' 没有在 super.init 调用前被初始化`
 
 * 为比选属性设置初始值
 
@@ -54,7 +54,7 @@ override init() {
 override init() {
     name = "张三"
     age = 18
-    
+
     super.init()
 }
 ```
@@ -76,10 +76,10 @@ class Student: Person {
 
     /// 学号
     var no: String
-    
+
     override init() {
         no = "001"
-        
+
         super.init()
     }
 }
@@ -107,3 +107,6 @@ class Person: NSObject {
 
 * `可选属性`不需要设置初始值，默认初始值都是 nil
 * `可选属性`是在设置数值的时候才分配空间的，是延迟分配空间的，更加符合移动开发中延迟创建的原则
+
+
+
