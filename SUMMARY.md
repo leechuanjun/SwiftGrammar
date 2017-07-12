@@ -1,6 +1,6 @@
 # Summary
 
-* [Swift 语法浅析](README.md)
+* [Swift 开发笔记](README.md)
    * [快速体验](primer/README.md)
        * [playground](primer/playground.md)
        * [项目开发体验](primer/first app.md)
