@@ -7,7 +7,7 @@
 ///
 /// - returns: Person 对象
 init(dict: [String: AnyObject]) {
-    setValuesForKeysWithDictionary(dict)
+    setValuesForKeys(dict)
 }
 ```
 
@@ -42,7 +42,7 @@ class Person: NSObject {
     init(dict: [String: AnyObject]) {
         super.init()
 
-        setValuesForKeysWithDictionary(dict)
+        setValuesForKeys(dict)
     }
 }
 ```
@@ -71,7 +71,7 @@ var age: Int? = 0
 init(dict: [String: AnyObject]) {
     super.init()
 
-    setValuesForKeysWithDictionary(dict)
+    setValuesForKeys(dict)
 }
 ```
 
@@ -83,7 +83,7 @@ init(dict: [String: AnyObject]) {
 init(dict: [String: AnyObject]) {
     super.init()
 
-    setValuesForKeysWithDictionary(dict)
+    setValuesForKeys(dict)
 }
 
 override func setValue(value: AnyObject?, forKey key: String) {
@@ -98,10 +98,10 @@ override func setValue(value: AnyObject?, forUndefinedKey key: String) {
 }
 ```
 
-* `setValuesForKeysWithDictionary` 会按照字典中的 `key` 重复调用 `setValue:forKey` 函数
+* `setValuesForKeys` 会按照字典中的 `key` 重复调用 `setValue:forKey` 函数
 * 如果没有实现 `forUndefinedKey` 函数，程序会直接崩溃
   * NSObject 默认在发现没有定义的键值时，会抛出 `NSUndefinedKeyException` 异常
-* 如果实现了 `forUndefinedKey`，会保证 `setValuesForKeysWithDictionary` 继续遍历后续的 `key`
+* 如果实现了 `forUndefinedKey`，会保证 `setValuesForKeys` 继续遍历后续的 `key`
 * 如果父类实现了 `forUndefinedKey`，子类可以不必再实现此函数
 
 ## 子类的 KVC 函数
