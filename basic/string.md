@@ -76,7 +76,7 @@ let helloString = "我们一起飞"
 (helloString as NSString).substringWithRange(NSMakeRange(2, 3))
 ```
 
-* 使用 Range 的写法
+* 使用 Range`<Index>` 的写法
 
 ```swift
 let startIndex = helloString.startIndex.advancedBy(0)
