@@ -15,7 +15,7 @@
 
     * Swift 2.0 `let result = 函数名(值1, 参数2: 值2...)` 第一个形参的名称省略
 
-    * Swift 3.0 `let result = 函数名(值1, 参数2: 值2...)` 调用的方式 -> OC的程序员非常喜欢
+    * Swift 3.0 `let result = 函数名(参数1: 值1, 参数2: 值2...)` 调用的方式 -> OC的程序员非常喜欢
         
 ```swift
 func sum(a: Int, b: Int) -> Int {
