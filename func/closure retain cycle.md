@@ -8,7 +8,7 @@ class NetworkTools: NSObject {
     /// 加载数据
     ///
     /// - parameter finished: 完成回调
-    func loadData(finished: @escaping () -> ()) ->() {
+    func loadData(finished: @escaping ()->()) -> () {
         print("开始加载数据...")
         
         // ...
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     
     /// 与 OC 中的 dealloc 类似，注意此函数没有()
     deinit {
-        print("控制器 88")
+        print("控制器 88 了!")
     }
 }
 ```
