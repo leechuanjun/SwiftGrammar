@@ -12,14 +12,25 @@ lazy var person: Person = {
 ```
 
 * 懒加载本质上是一个闭包
-* 完整写法如下：供参考
-    {} 包装代码
-    () 执行代码
-     
-    日常开发：
-    1. 闭包中的智能提示不好
+* 完整写法如下：供参考  
+    {} 包装代码  
+    \(\) 执行代码
+
+  日常开发：  
+    1. 闭包中的智能提示不好  
     2. 闭包中如果出现 self. 还需要注意循环引用
-     
+
+
+```swift
+lazy var label = { () -> UILabel in   
+    let l = UILabel()
+    // 设置 lable 的属性...
+        
+    return l
+}()
+```
+
+
 * 以上代码可以改写为以下格式
 
 ```swift
@@ -35,3 +46,6 @@ lazy var demoPerson: Person = self.personFunc()
 ```swift
 lazy var demoPerson: Person = Person()
 ```
+
+
+
