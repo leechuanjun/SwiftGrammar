@@ -20,18 +20,16 @@ lazy var person: Person = {
     1. 闭包中的智能提示不好  
     2. 闭包中如果出现 self. 还需要注意循环引用
 
-
 ```swift
 lazy var label = { () -> UILabel in   
     let l = UILabel()
     // 设置 lable 的属性...
-        
+
     return l
 }()
 ```
 
-
-* 以上代码可以改写为以下格式
+* 以上Person代码可以改写为以下格式
 
 ```swift
 let personFunc = { () -> Person in
