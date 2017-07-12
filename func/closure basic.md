@@ -63,6 +63,7 @@ func loadData(finished: ()->()) {
 ```
 
 * 添加回调参数
+* 嵌套的 GCD Xcode 不会改成尾随闭包
 
 ```swift
 override func viewDidLoad() {
