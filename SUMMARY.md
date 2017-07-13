@@ -1,5 +1,5 @@
 # Summary 
-* [Introuction](README.md)
+* [Introduction](introduction/README.md)
 
 * [Swift 开发笔记](README.md)
   * [快速体验](primer/README.md)
