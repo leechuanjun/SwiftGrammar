@@ -7,7 +7,7 @@
 * 指定 UITableViewController 的类为 `TLListTableViewController`
 
 ```swift
-class ViewController: UITableViewController {
+class TLListTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
