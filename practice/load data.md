@@ -11,18 +11,18 @@
 
 ## 加载数据 —— `extension`
 
-* 新建 Person.swift
+* 新建 TLPerson.swift
 
 ```swift
 /// 个人信息
-class Person: NSObject {
+class TLPerson: NSObject {
     var name: String?
     var age: Int = 0
     
     init(dict: [String: AnyObject]) {
         super.init()
         
-        setValuesForKeysWithDictionary(dict)
+        setValuesForKeys(dict)
     }
 }
 ```
@@ -31,22 +31,22 @@ class Person: NSObject {
 
 ```swift
 // MARK: - 数据处理
-extension ViewController {
+extension TLListTableViewController {
     /// 加载数据
     private func loadData() {
         
-        dispatch_async(dispatch_get_global_queue(0, 0)) {
+        DispatchQueue.global().async {
             
             print("后台加载数据...")
             
-            var array = [Person]()
+            var array = [TLPerson]()
             
             // 填充数据
             for i in 0..<50 {
                 let name = "张三 \(i)"
                 let age = random() % 20 + 10
                 
-                array.append(Person(dict: ["name": name, "age": age]))
+                array.append(TLPerson(dict: ["name": name, "age": age]))
             }
             
             print(array)
@@ -67,7 +67,7 @@ extension ViewController {
 ```swift
 override var description: String {
     let keys = ["name", "age"]
-    return dictionaryWithValuesForKeys(keys).description
+    return dictionaryWithValues(forKeys: keys).description
 }
 ```
 
@@ -75,9 +75,9 @@ override var description: String {
 
 ```swift
 /// 加载数据
-private func loadData(finished: (array: [Person])->()) {
+private func loadData(finished: (array: [TLPerson])->()) {
     
-    dispatch_async(dispatch_get_global_queue(0, 0)) {
+    DispatchQueue.global().async {
         
         print("后台加载数据...")
         
@@ -88,12 +88,12 @@ private func loadData(finished: (array: [Person])->()) {
             let name = "张三 \(i)"
             let age = random() % 20 + 10
             
-            array.append(Person(dict: ["name": name, "age": age]))
+            array.append(TLPerson(dict: ["name": name, "age": age]))
         }
         
-        dispatch_async(dispatch_get_main_queue()) {
+        DispatchQueue.main.async (execute: {
             finished(array: array)
-        }
+        })
     }
 }
 ```
@@ -101,7 +101,7 @@ private func loadData(finished: (array: [Person])->()) {
 * 闭包参数的定义技巧
 
     * 定义参数 `finished: ()->()`
-    * 根据需要添加闭包的参数 `finished: (array: [Person])->()`
+    * 根据需要添加闭包的参数 `finished: (array: [TLPerson])->()`
     * 调用闭包，需要附带 `外部参数`
 
 > 在 iOS 开发中，闭包(block)最常用的应用场景就是异步执行完成后，通过参数传递异步执行的结果
@@ -110,7 +110,7 @@ private func loadData(finished: (array: [Person])->()) {
 
 ```swift
 /// 个人数据数组
-private var persons: [Person]?
+private var persons: [TLPerson]?
 ```
 
 * 调整调用 `loadData` 函数
@@ -127,7 +127,7 @@ loadData { (array) -> () in
 
 ```swift
 // MARK: - 表格数据源方法
-extension ViewController {
+extension TLListTableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return persons?.count ?? 0
     }
