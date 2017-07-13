@@ -6,10 +6,10 @@
 
 ## 布局
 
-* 新建 `DetailViewController` 继承自 `ViewController`
-* 在 `Main.storyboard` 中给 `ViewController` 嵌入导航控制器
-* 新增 `UIViewController` 并指定类型为 `DetailViewController`
-* 从 `Cell` 连线到 `detailViewController` 并选择 `Show`
+* 新建 `TLDetailTableViewController` 继承自 `UITableViewController`
+* 在 `Main.storyboard` 中给 `TLDetailTableViewController` 嵌入导航控制器
+* 新增 `UITableViewController` 并指定类型为 `TLDetailTableViewController`
+* 从 `Cell` 连线到 `TLDetailTableViewController` 并选择 `Show`
 * 新增 `Navigation Item`，并且设置标题
 * 新增 `Bar Button Item` 并且设置标题为 `保存`，`Enabled` 设置为 `false`
 * 新增 `姓名` & `年龄` 文本框
@@ -27,7 +27,7 @@
 
 ```swift
 /// 文本变化
-@IBAction func textDidChanged(sender: UITextField) {
+@IBAction func textChange(_ sender: Any) {
     navigationItem.rightBarButtonItem?.enabled = nameText.hasText() && ageText.hasText()
 }
 ```
@@ -36,7 +36,7 @@
 
 ```swift
 /// 保存
-@IBAction func save(sender: AnyObject) {
+@IBAction func savePerson(_ sender: Any) {
 }
 ```
 
@@ -46,15 +46,15 @@
 
 ```swift
 /// 个人模型
-var person: Person?
+var person: TLPerson?
 ```
 
-* 在 `ViewController` 中实现 `prepareForSegue` 函数，传递参数
+* 在 `TLListTableViewController` 中实现 `prepare` 函数，传递参数
 
 ```swift
-override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     // 判断目标控制器
-    guard let vc = segue.destinationViewController as? DetailViewController else {
+    guard let vc = segue.destination as? TLDetailTableViewController else {
         return
     }
     
@@ -87,8 +87,8 @@ private func setupNavigation() {
 }
 ```
 
-* 分别修改 `viewDidLoad` 和 `textDidChanged` 的函数调用
-* 实现 `save` 函数
+* 分别修改 `viewDidLoad` 和 `textChange` 的函数调用
+* 实现 `savePerson` 函数
 
 ```swift
 /// 保存
@@ -113,7 +113,7 @@ var savePersonCallBack: (()->())?
 
 ```swift
 /// 保存
-@IBAction func save(sender: AnyObject) {
+@IBAction func savePerson(sender: AnyObject) {
     person?.name = nameText.text
     person?.age = Int(ageText.text!) ?? 0
     
@@ -130,7 +130,7 @@ var savePersonCallBack: (()->())?
 * 设置完成回调
 
 ```swift
-override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+override func prepare(segue: UIStoryboardSegue, sender: AnyObject?) {
     // 判断目标控制器
     guard let vc = segue.destinationViewController as? DetailViewController else {
         return
