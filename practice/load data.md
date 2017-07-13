@@ -133,7 +133,7 @@ extension TLListTableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("listCellId", forIndexPath: indexPath)
         
         cell.textLabel?.text = persons![indexPath.row].name
         
